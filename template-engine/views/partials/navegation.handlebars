@@ -1,4 +1,25 @@
-<div class="container text-center">
+{{#each items as |item|}}
+<div class="col-md-2">
+    <div class="card">
+        <div class="card-header">
+            <p>{{item.name}}</p>
+        </div>
+        <img src="{{item.crestUrl}}" width="100px" height="100px" class="mx-auto d-block">
+        <div class="card-body">
+            <p>{{item.description}}</p>
+        </div>
+        <div class="card-footer">
+            <a href="/delete/{{item.id}}" class="btn btn-danger">
+                Delete
+            </a>
+        </div>
+    </div>
+</div>
+{{/each}}
+
+
+
+{{!-- <div class="container text-center">
     <div class="row">
         <div class="col">
             <div class="card-header">
@@ -33,4 +54,4 @@
             {{/each}}
         </div>
     </div>
-</div>
+</div> --}}
