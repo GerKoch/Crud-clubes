@@ -1,0 +1,29 @@
+{
+  "name": "crud-clubes",
+  "version": "1.0.0",
+  "description": "Tarea clase 17 para r/argentina programa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:template": "cd ./template-engine && nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerKoch/Crud-clubes.git"
+  },
+  "author": "Koch Germán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GerKoch/Crud-clubes/issues"
+  },
+  "homepage": "https://github.com/GerKoch/Crud-clubes#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1",
+    "morgan": "^1.10.0",
+    "uuid": "^10.0.0"
+  }
+}
