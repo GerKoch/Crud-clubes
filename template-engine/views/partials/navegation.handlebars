@@ -1,14 +1,21 @@
 {{#each items as |item|}}
-<div class="col-md-2">
-    <div class="card">
+<div class="col-md-3">
+    <div class="card my-2">
         <div class="card-header">
             <p>{{item.name}}</p>
         </div>
-        <img src="{{item.crestUrl}}" width="100px" height="100px" class="mx-auto d-block">
-        <div class="card-body">
-            <p>{{item.description}}</p>
+        <div class="m-2">
+            <img src="{{item.crestUrl}}" width="100px" height="100px" class="mx-auto d-block">
+            <p>{{item.area.area}}</p>
         </div>
+
         <div class="card-footer">
+            <a href="/team{{item.id}}" class="btn  btn-success">
+                Ver
+            </a>
+            <a href="/delete/{{item.id}}" class="btn btn-secondary">
+                Editar
+            </a>
             <a href="/delete/{{item.id}}" class="btn btn-danger">
                 Delete
             </a>
@@ -16,42 +23,3 @@
     </div>
 </div>
 {{/each}}
-
-
-
-{{!-- <div class="container text-center">
-    <div class="row">
-        <div class="col">
-            <div class="card-header">
-                <p>Nombre Equipo</p>
-            </div>
-            <div>
-                <ul>
-                    {{#each items as |item|}}
-                    <p>{{item.name}}</p>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-header">
-                <p>País</p>
-            </div>
-            <div>
-                <ul>
-                    {{#each items as |item|}}
-                    <p>{{item.area.name}}</p>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-header">
-                <p>Acción</p>
-            </div>
-            {{#each items as |item|}}
-            <p>Ver, Editar, Eliminar</p>
-            {{/each}}
-        </div>
-    </div>
-</div> --}}

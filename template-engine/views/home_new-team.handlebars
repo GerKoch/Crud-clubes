@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <form method="POST" action="/new-team" class="card card-body">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Entry a new team name" autofocus
+                required>
+        </div>
+        <div class="form-group">
+            <label for="area">Country</label>
+            <input type="text" class="form-control" name="area" id="area" placeholder="Country" required>
+        </div>
+        <div class="form-group">
+            <label for="crestUrl">Image</label>
+            <input type="text" class="form-control" name="crestUrl" id="crestUrl" placeholder="http://website.com" required>
+        </div>
+        <div class="form-group">
+            <label for="clubColors">Colors</label>
+            <input type="text" class="form-control" name="clubColors" id="clubColors" placeholder="Colors" required>
+        </div>
+        <input type="submit" value="Save Team" class="btn btn-dark mt-4">
+    </form>
+</div>
