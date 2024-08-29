@@ -64,6 +64,27 @@ router.get('/team57', (req, res) => {
     });
 });
 
+router.get('/team58', (req, res) => {
+    const json_equipo = fs.readFileSync('./data/equipos/AST.json')
+    let equipo = JSON.parse(json_equipo);
+    res.render('home_team-58', {
+        layout: 'team-58', 
+        data: {
+            equipo,
+        } 
+    });
+});
+
+router.get('/team61', (req, res) => {
+    const json_equipo = fs.readFileSync('./data/equipos/CHE.json')
+    let equipo = JSON.parse(json_equipo);
+    res.render('home_team-61', {
+        layout: 'team-61', 
+        data: {
+            equipo,
+        } 
+    });
+});
 
 
 router.get('/')

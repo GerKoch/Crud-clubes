@@ -1,0 +1,13 @@
+{{#each items as |item|}}
+<div class="card m-2" style="width: 300px">
+    <div class="card-body text-white">
+        <h6>Name: {{item.name}}</h6>
+        <h6>Position: {{item.position}}</h6>
+        <h6>Born: {{item.dateOfBirth}}</h6>
+        <h6>Country: {{item.countryOfBirth}}</h6>
+        <h6>Nationality: {{item.nationality}}</h6>
+        <h6>Number: {{item.shirtNumber}}</h6>
+        <h6>Role: {{item.role}}</h6>
+    </div>
+</div>
+{{/each}}
