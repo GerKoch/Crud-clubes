@@ -1,0 +1,16 @@
+<div class="container pt-4">
+    <img src="{{data.equipo.crestUrl}}" width="200px" height="200px" class="mx-auto d-block">
+    <p class="p-3 mb-2 text-center text-white fs-4">{{data.equipo.name}}</p>
+</div>
+<div class="container">
+    <p class="mb-2 text-center text-white fs-4">{{data.equipo.tla}}</p>
+    <p class="mb-2 text-center text-white fs-4">Founded in: {{data.equipo.founded}}</p>
+    <p class="mb-2 text-center text-white fs-4">Venue: {{data.equipo.venue}}</p>
+</div>
+
+<div class="container p-4">
+    <div class="row" id="card-container">
+        <h3 class="text-center text-white">Squad</h3>
+        {{> team-57-squad items=data.equipo.squad}} 
+    </div>
+</div>

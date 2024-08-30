@@ -1,25 +1,45 @@
-{{#each items as |item|}}
-<div class="col-md-3">
-    <div class="card my-2">
-        <div class="card-header">
-            <p>{{item.name}}</p>
-        </div>
-        <div class="m-2">
-            <img src="{{item.crestUrl}}" width="100px" height="100px" class="mx-auto d-block">
-            <p>{{item.area.area}}</p>
-        </div>
-
-        <div class="card-footer">
-            <a href="/team{{item.id}}" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                Ver
-            </a>
-            <a href="/delete/{{item.id}}" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                Editar
-            </a>
-            <a href="/delete/{{item.id}}" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                Delete
-            </a>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr class="table-active">
+                        <th>Nombre Equipo</th>
+                        <th>País</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items as |item|}}
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="{{item.crestUrl}}" width="30px" height="30px">
+                                {{item.name}}
+                            </div>
+                        </td>
+                        <td>{{item.area.name}}</td>
+                        <td>
+                            <div class="card-footer">
+                                <a href="/team{{item.id}}"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    View
+                                </a>
+                                <a href="/delete/{{item.id}}"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    Edit
+                                </a>
+                                <a href="/delete/{{item.id}}"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
         </div>
     </div>
+
 </div>
-{{/each}}
